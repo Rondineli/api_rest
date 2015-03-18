@@ -1,10 +1,10 @@
-from django.shortcuts import get_object_or_404
 from rest_framework import generics
 
 from servers.models import ServersModel
 from rest_framework import (
     serializers,
-    viewsets
+    viewsets,
+    filters
 )
 
 
@@ -14,6 +14,7 @@ class ServersSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('server_name', 'ip', 'is_active')
 
 
-class ServersViewSet(viewsets.ModelViewSet):
-    queryset = ServersModel.objects.all()
+class ServersViewSet(viewsets.ModelViewSet, generics.ListAPIView):
+    queryset = ServersModel.objects.filter(is_active=True)
     serializer_class = ServersSerializer
+    lookup_field = 'server_name'

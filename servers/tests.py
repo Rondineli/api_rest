@@ -4,8 +4,6 @@
 from django.test import Client, TestCase
 from django.contrib.auth.models import User
 
-from rest_framework.test import APIClient
-
 
 class ServerTests(TestCase):
 
@@ -26,10 +24,18 @@ class ServerTests(TestCase):
                 'password': u'rondigomes'
             }
         )
-        print response.status_code
 
     @login_api
-    def test_create_server(self):
+    def test_list_servers(self):
+        response = self.client.get(
+            '/servers/', {
+                'format': 'json'
+            }
+        )
+        self.assertEqual(response.status_code, 200)
+
+    @login_api
+    def test_create_servers(self):
         response = self.client.post(
             '/servers/', {
                 'server_name': 'host_test',
