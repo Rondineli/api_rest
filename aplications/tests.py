@@ -29,9 +29,9 @@ class ServerTests(TestCase):
         self.assertEqual(1 + 1, 2)
 
     @login_api
-    def test_list_servers(self):
+    def test_list_aplications(self):
         response = self.client.get(
-            '/servers/', {
+            '/aplications/', {
                 'format': 'json'
             }
         )
@@ -40,10 +40,9 @@ class ServerTests(TestCase):
     @login_api
     def test_create_servers(self):
         response = self.client.post(
-            '/servers/', {
-                'server_name': 'host_test',
-                'is_active': True,
-                'ip': 'qqcoisa'
+            '/aplications/', {
+                'aplication': 'apache',
+                'server': 1
             }
         )
         self.assertEqual(response.status_code, 201)
@@ -51,7 +50,7 @@ class ServerTests(TestCase):
     @login_api
     def test_delete_server(self):
         response = self.client.delete(
-            '/servers/1', {
+            '/aplications/1', {
                 'format': 'json'
             }
         )

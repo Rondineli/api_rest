@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from servers.views import ServersViewSet
+from aplications.views import AplicationsViewSet
 
 from rest_framework import routers
 
@@ -12,7 +13,7 @@ from rest_framework import routers
 """
 router = routers.DefaultRouter()
 router.register(r'servers', ServersViewSet)
-
+router.register(r'aplications', AplicationsViewSet)
 """
 # Examples:
 # url(r'^$', 'api_rest.views.home', name='home'),
