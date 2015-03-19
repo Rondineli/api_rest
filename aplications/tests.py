@@ -38,7 +38,7 @@ class ServerTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
     @login_api
-    def test_create_servers(self):
+    def test_create_aplications(self):
         response = self.client.post(
             '/aplications/', {
                 'aplication': 'apache',
@@ -48,7 +48,7 @@ class ServerTests(TestCase):
         self.assertEqual(response.status_code, 201)
 
     @login_api
-    def test_delete_server(self):
+    def test_delete_aplications(self):
         response = self.client.delete(
             '/aplications/1', {
                 'format': 'json'
