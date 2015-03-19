@@ -21,6 +21,7 @@ _____
 ________________
 |http://localhost:8000/api-auth/login <- Authenticate your user
 ________________
+
 |http://localhost:8000/api-auth?format=json <-- Get the json infos
 ________________
 |http://localhost:8000/api-auth?format=api <-- Get the api cruds
@@ -77,7 +78,6 @@ ________________
 |Method: POST
 ________________
 |http://localhost:8000/aplications/1/?format=json <-- Return 204
-________________
 ________________
 #For detail specific aplications:
 ________________
