@@ -73,8 +73,9 @@ ________________
 |http://localhost:8000/servers/1?format=json&server_name='new_server_foo'&ip='new_ip'&is_active=True
 ________________
 ________________
+
 * Manipule aplications on the api rest
-_____
+
 #For create Server:
 ________________
 |Method: POST
@@ -87,6 +88,7 @@ ________________
 ________________
 |http://localhost:8000/aplications/1/?format=json <-- Return 204
 ________________
+
 #For detail specific aplications:
 ________________
 |Method: GET
@@ -95,7 +97,7 @@ ________________
 
 ________________
 
-#For update server
+#For update aplication
 ________________
 
 |Methos: POST
