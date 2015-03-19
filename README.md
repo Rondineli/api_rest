@@ -16,27 +16,35 @@ _____
 #Running project:
 
 |python manage.py runserver 0.0.0.0:8000
-_____
+___________
 #Access the api
 ________________
 |http://localhost:8000/api-auth/login <- Authenticate your user
 ________________
 
 |http://localhost:8000/api-auth?format=json <-- Get the json infos
+
 ________________
 |http://localhost:8000/api-auth?format=api <-- Get the api cruds
+
 ________________
 |http://localhost:8000/servers/?format=json <-- Get list all server in json
+
 ________________
 |http://localhost:8000/servers/?format=api <-- Get list all server in api
+
 ________________
 |http://localhost:8000/aplications/?format=json <-- Get list all aplications in json
+
 ________________
 |http://localhost:8000/aplications/?format=api <-- Get list all aplications in api
+
 ________________
 
+
 * Manipule Servers on the api rest
-_____
+________________
+
 #For create Server:
 
 ________________
@@ -84,10 +92,13 @@ ________________
 |Method: GET
 ________________
 |http://localhost:8000/aplications/1 or http://localhost:8000/aplications/aplication_foo
-_____
+
 ________________
+
 #For update server
 ________________
+
 |Methos: POST
 ________________
+
 |http://localhost:8000/aplications/1?format=json&server_name='new_server_foo'&ip='new_ip'&is_active=True
